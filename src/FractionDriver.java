@@ -12,8 +12,8 @@ public class FractionDriver {
 
         //keeps track of loop iteration
         int current = 0;
-        //reads file
-        Scanner in = new Scanner(new FileInputStream("fraction.txt"));
+        //reads file with scanner
+        Scanner in = new Scanner(new FileInputStream("fractions.txt"));
 
         //makes it run at least once
         do {
@@ -30,7 +30,7 @@ public class FractionDriver {
             //uses fraction class to create a fraction with the num & denom we found
             Fraction createFraction = new Fraction(num, denom);
 
-            if (current = 0) {
+            if (current == 0) {
                 FractionCounter newCount = new FractionCounter(createFraction);
                 fractions.addFraction(newCount); //brings the new object to objectlist
                 current++;
