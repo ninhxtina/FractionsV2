@@ -24,6 +24,7 @@ public class Fraction {
         return gcd;
     }
 
+    //reduces the fractions
     public void setReduce(int n, int d) {
         int gcd = gcdReduce(n,d);
         this.num = (n/gcd);

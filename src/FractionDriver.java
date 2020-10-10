@@ -30,27 +30,33 @@ public class FractionDriver {
             //uses fraction class to create a fraction with the num & denom we found
             Fraction createFraction = new Fraction(num, denom);
 
+            //if first line of txt file
             if (current == 0) {
+                //creates fraction object
                 FractionCounter newCount = new FractionCounter(createFraction);
                 fractions.addFraction(newCount); //brings the new object to objectlist
-                current++;
+                current++; //increase value by 1, since process went through
             } else {
+                //if not the first line of txt file
                 boolean counted = false;
                 for (int i = 0; i < fractions.length(); i++) {
+                    //checks all the fractions in objectlist
                     FractionCounter currentCount = fractions.getValue(i);
 
                     if (currentCount.compareAndIncrement(createFraction)) {
-                        counted = true;
+                        counted = true; //checks if fraction is added in objectlist
                         break;
                     }
                 }
+                //if currentcount is not equal to createfraction
                 if (counted == false) {
                     FractionCounter newCurrentCount = new FractionCounter(createFraction);
-
+                    //add this fraction to the objectlist
                     fractions.addFraction(newCurrentCount);
                 }
             }
         }
+        //continues to read the txt file until there are no more lines
         while (in.hasNextLine());
 
         in.close(); //close file
