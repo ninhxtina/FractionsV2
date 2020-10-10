@@ -1,6 +1,8 @@
 /** Christina Ninh
  * CSS143 Kalmin
  *
+ * Credits: https://www.geeksforgeeks.org/reduce-the-fraction-to-its-lowest-form/
+ * https://stackoverflow.com/questions/6618994/simplifying-fractions-in-java
  */
 
 public class Fraction {
