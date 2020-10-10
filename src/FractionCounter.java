@@ -23,6 +23,7 @@ public class FractionCounter {
         }
     }
 
+    @Override
     //replace this inherited method with one that prints out both the Fraction and its count
     public String toString() {
         String retVal = theFraction.toString() + " has a count of " + counter;
